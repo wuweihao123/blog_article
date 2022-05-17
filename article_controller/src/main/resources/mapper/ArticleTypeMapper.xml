@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 会以namespace 和 id 在mapper 中查询具体的方法
+         resultType 表示返回对象的数据类型
+         parameterType 表示传入的数据对象
+         id  唯一标识，要与命名空间（抽象方法）中定义的方法名称一致
+ -->
+<mapper namespace="com.wwh.blog.mapper.ArticleTypeMapper">
+    <resultMap id="baseMap" type="com.wwh.blog.pojo.ArticleType">
+        <id property="id" column="id"></id>
+        <result property="type" column="article_type"></result>
+        <result property="notes" column="article_notes"></result>
+        <result property="createUser" column="create_user"></result>
+        <result property="createTime" column="create_time"></result>
+        <result property="updateUser" column="update_user"></result>
+        <result property="updateTime" column="update_time"></result>
+    </resultMap>
+
+</mapper>
